@@ -1,16 +1,64 @@
-# React + Vite
+# Tulas International School Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive and interactive homepage designed and developed for Tulas International School.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://tulas-international-school-gamma.vercel.app/
 
-## React Compiler
+## 📂 GitHub Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://github.com/ManasaVegi999/tulas-international-school
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- Intersection Observer API
+
+## ✨ Features
+
+- Modern and responsive school homepage
+- Tulas International School branding
+- Responsive navigation bar
+- Hero section with call-to-action buttons
+- About section
+- Academics section
+- Sports section
+- Campus section
+- Testimonials section
+- Admissions section
+- Scroll-triggered reveal animations
+- Dark mode
+- Interactive hover effects
+- Responsive design for desktop, tablet and mobile
+
+## 🎨 Design
+
+The website uses a clean and minimal visual style with:
+
+- Off-white background
+- Dark green typography
+- Rounded cards and buttons
+- Large modern headings
+- Smooth hover and scroll animations
+
+## 📱 Responsive Design
+
+The website is designed to work across:
+
+- Desktop
+- Tablet
+- Mobile devices
+
+CSS media queries are used to adjust layouts, typography, spacing and cards for different screen sizes.
+
+## ⚙️ How to Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ManasaVegi999/tulas-international-school.git
