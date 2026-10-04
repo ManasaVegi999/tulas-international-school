@@ -70,9 +70,12 @@ useEffect(() => {
           <a href="#admissions">Admissions</a>
         </div>
 
-        <button className="nav-button">
-          Enquire Now
-        </button>
+        <button
+  className="nav-button"
+  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+>
+  Enquire Now
+</button>
         <button
   className="theme-button"
   onClick={() => setDarkMode(!darkMode)}
