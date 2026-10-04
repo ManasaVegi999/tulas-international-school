@@ -1,0 +1,981 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f1e8;
+  color: #17251f;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f1e8;
+  border-bottom: 1px solid rgba(23, 37, 31, 0.12);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 90px;
+  height: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #17251f;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+.nav-button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 30px;
+  background: #17251f;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+  min-height: calc(100vh - 80px);
+  padding: 80px 6%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  margin-bottom: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  max-width: 850px;
+  font-size: clamp(60px, 8vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -5px;
+  margin-bottom: 32px;
+}
+
+.hero-text {
+  max-width: 550px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #53615b;
+  margin-bottom: 36px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+  padding: 15px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: #17251f;
+  color: white;
+}
+
+.secondary-button {
+  border: 1px solid #17251f;
+  color: #17251f;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+    letter-spacing: -3px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .school-logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  display: block;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.eyebrow {
+  font-size: 20px;
+  letter-spacing: 4px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 56px;
+  line-height: 1.05;
+  margin: 25px 0;
+  color: #10231d;
+}
+
+}
+.about-text {
+  max-width: 650px;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #42534d;
+  margin: 0;
+}
+.about {
+  padding: 120px 7%;
+  background: #f5f1e8;
+  box-sizing: border-box;
+}
+
+.about-content {
+  max-width: 900px;
+}
+.academics {
+  padding: 120px 7%;
+  background: #ffffff;
+}
+
+.academics-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.academics h2 {
+  font-size: 64px;
+  line-height: 1;
+  margin: 25px 0 60px;
+  color: #10231d;
+}
+
+.academic-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.academic-card {
+  padding: 35px;
+  border: 1px solid #d8ddd9;
+  border-radius: 20px;
+  background: #f5f5f0;
+}
+
+.academic-card h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #10231d;
+}
+
+.academic-card p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #42534d;
+}
+/* =========================
+   SPORTS SECTION
+========================= */
+
+.sports {
+  padding: 110px 7%;
+  background: #f5f1e8;
+  color: #17251f;
+}
+
+.sports-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sports .eyebrow {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 35px;
+}
+
+.sports h2 {
+  font-size: clamp(40px, 5vw, 80px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 65px;
+  color: #17251f;
+}
+
+/* Sports Cards */
+
+.sports-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.sports-card {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 24px;
+  border: 1px solid #e0e0dc;
+  min-height: 260px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sports-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.sports-card h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #17251f;
+}
+
+.sports-card p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #53615b;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+  .sports {
+    padding: 80px 6%;
+  }
+
+  .sports-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sports h2 {
+    font-size: 55px;
+  }
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .sports {
+    padding: 65px 5%;
+  }
+
+  .sports h2 {
+    font-size: clamp(36px, 8vw, 48px);
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+  }
+
+  .sports-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sports-card {
+    padding: 35px 25px;
+    min-height: auto;
+  }
+
+  .sports-card h3 {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  .sports-card p {
+    font-size: 16px;
+  }
+
+  .sports .eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+}
+/* =========================
+   CAMPUS SECTION
+========================= */
+
+.campus {
+  padding: 110px 7%;
+  background: #ffffff;
+  color: #17251f;
+}
+
+.campus-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.campus .eyebrow {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 35px;
+}
+
+.campus h2 {
+  font-size: clamp(40px, 5vw, 80px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 65px;
+  color: #17251f;
+}
+
+/* Campus Cards */
+
+.campus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.campus-card {
+  background: #f5f1e8;
+  padding: 50px 40px;
+  border-radius: 24px;
+  border: 1px solid #e0e0dc;
+  min-height: 260px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.campus-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.campus-card h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #17251f;
+}
+
+.campus-card p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #53615b;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .campus {
+    padding: 80px 6%;
+  }
+
+  .campus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .campus h2 {
+    font-size: 55px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .campus {
+    padding: 65px 5%;
+  }
+
+  .campus h2 {
+    font-size: clamp(36px, 8vw, 48px);
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+  }
+
+  .campus-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .campus-card {
+    padding: 35px 25px;
+    min-height: auto;
+  }
+
+  .campus-card h3 {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  .campus-card p {
+    font-size: 16px;
+  }
+
+  .campus .eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+}
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials {
+  padding: 110px 7%;
+  background: #f5f1e8;
+  color: #17251f;
+}
+
+.testimonials-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.testimonials .eyebrow {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 35px;
+}
+
+.testimonials h2 {
+  font-size: clamp(40px, 5vw, 80px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 65px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonial-card {
+  padding: 45px 38px;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e0e0dc;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-card p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #42534d;
+  margin: 0 0 30px;
+}
+
+.testimonial-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #17251f;
+  margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .testimonials {
+    padding: 65px 5%;
+  }
+
+  .testimonials h2 {
+    font-size: clamp(36px, 8vw, 48px);
+    margin-bottom: 40px;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 35px 25px;
+  }
+
+  .testimonial-card p {
+    font-size: 16px;
+  }
+
+}
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  background: #10231d;
+  color: #ffffff;
+  padding: 80px 7% 30px;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.footer-brand {
+  max-width: 400px;
+}
+
+.footer-logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin-bottom: 25px;
+}
+
+.footer-brand p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #c9d1cd;
+}
+
+.footer-links {
+  display: flex;
+  gap: 100px;
+}
+
+.footer-links div {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.footer-links a {
+  color: #c9d1cd;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 60px auto 0;
+  padding-top: 25px;
+
+  border-top: 1px solid #3c4a44;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #9da9a3;
+}
+
+
+/* Footer Mobile */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 60px 6% 25px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .footer-links {
+    gap: 60px;
+  }
+
+  .footer-bottom {
+    margin-top: 45px;
+  }
+
+}
+/* =========================================
+   SCROLL PROGRESS BAR
+========================================= */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 4px;
+  width: 0;
+
+  background: #10231d;
+
+  z-index: 9999;
+
+  transition: width 0.1s ease;
+}
+/* =========================================
+   THEME BUTTON
+========================================= */
+
+.theme-button {
+  border: 1px solid #10231d;
+  background: transparent;
+  color: #10231d;
+
+  padding: 12px 18px;
+  border-radius: 30px;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.theme-button:hover {
+  background: #10231d;
+  color: #ffffff;
+}
+/* =========================================
+   ADMISSIONS SECTION
+========================================= */
+
+.admissions {
+  padding: 130px 7%;
+  box-sizing: border-box;
+
+  background: #f5f1e8;
+}
+
+.admissions-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.admissions .eyebrow {
+  margin-bottom: 30px;
+}
+
+.admissions h2 {
+  max-width: 900px;
+
+  margin: 0 0 30px;
+
+  font-size: 76px;
+  line-height: 1;
+  letter-spacing: -3px;
+
+  color: #10231d;
+}
+
+.admissions-text {
+  max-width: 700px;
+
+  margin: 0 0 40px;
+
+  font-size: 20px;
+  line-height: 1.7;
+
+  color: #42534d;
+}
+
+
+/* Dark Mode */
+
+.dark-mode .admissions {
+  background: #101815;
+}
+
+.dark-mode .admissions h2 {
+  color: #f5f1e8;
+}
+
+.dark-mode .admissions-text {
+  color: #c5cec9;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .admissions {
+    padding: 80px 6%;
+  }
+
+  .admissions h2 {
+    font-size: 45px;
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+
+  .admissions-text {
+    font-size: 18px;
+  }
+
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.dark-mode {
+  background: #101815;
+  color: #f5f1e8;
+}
+
+.dark-mode .navbar,
+.dark-mode .hero,
+.dark-mode .about,
+.dark-mode .sports,
+.dark-mode .testimonials {
+  background: #101815;
+}
+
+.dark-mode .academics,
+.dark-mode .campus {
+  background: #17211d;
+}
+
+.dark-mode .eyebrow,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: #f5f1e8;
+}
+
+.dark-mode p {
+  color: #c5cec9;
+}
+
+.dark-mode .academic-card,
+.dark-mode .sports-card,
+.dark-mode .campus-card,
+.dark-mode .testimonial-card {
+  background: #202b26;
+  border-color: #35423c;
+}
+
+.dark-mode .nav-links a {
+  color: #f5f1e8;
+}
+
+.dark-mode .theme-button {
+  border-color: #f5f1e8;
+  color: #f5f1e8;
+}
+
+.dark-mode .theme-button:hover {
+  background: #f5f1e8;
+  color: #10231d;
+}
+
+.dark-mode .secondary-button {
+  color: #f5f1e8;
+  border-color: #f5f1e8;
+}
+
+.dark-mode .secondary-button:hover {
+  background: #f5f1e8;
+  color: #10231d;
+}
+
+
+/* =========================================
+   MOBILE THEME BUTTON
+========================================= */
+
+@media (max-width: 768px) {
+
+  .theme-button {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+}
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact {
+  padding: 120px 7%;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.contact-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact .eyebrow {
+  margin-bottom: 30px;
+}
+
+.contact h2 {
+  max-width: 900px;
+  margin: 0 0 30px;
+
+  font-size: 76px;
+  line-height: 1;
+  letter-spacing: -3px;
+
+  color: #10231d;
+}
+
+.contact-text {
+  max-width: 700px;
+  margin: 0 0 40px;
+
+  font-size: 20px;
+  line-height: 1.7;
+
+  color: #42534d;
+}
+
+
+/* Dark Mode */
+
+.dark-mode .contact {
+  background: #17211d;
+}
+
+.dark-mode .contact h2 {
+  color: #f5f1e8;
+}
+
+.dark-mode .contact-text {
+  color: #c5cec9;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 80px 6%;
+  }
+
+  .contact h2 {
+    font-size: 45px;
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+
+  .contact-text {
+    font-size: 18px;
+  }
+
+}
